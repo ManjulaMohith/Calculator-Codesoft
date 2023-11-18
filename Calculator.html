@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="https://3.imimg.com/data3/KM/FM/GLADMIN-17957/scientific-calculator-500x500.jpg">
+</head>
+<style>
+    .calci{
+        height: 500px;
+        width: 330px;
+        border: 1px solid rgb(126, 126, 128);
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 4px 3px rgb(2, 2, 32);
+    }
+    .top{
+        height: 110px;
+        width: 325px;
+        border: 1px solid rgb(241, 233, 233);
+        background-color: rgb(22, 17, 96);
+        border-radius:10px 10px 0px 0px;
+        border-bottom: 1px solid rgb(213, 214, 220);
+        color: white; 
+        font-size: 40px;
+        font-family: arial;
+        text-align: end;
+    }
+    /* .inner{
+        height: 40px;
+        width: 323px;
+        background-color: rgb(22, 17, 96);
+        color: rgb(215, 202, 202);
+        text-align: end;
+    } */
+    
+    .line{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 13px;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 15px;
+        border: 1px solid transparent;
+        background-color: rgb(32, 90, 183);
+        text-align: center;
+        color: white;
+        padding: 2px;
+        box-shadow:0 0 10px 5px rgba(6, 8, 44, 0.3);
+        /* box-shadow:inset 0 0 10px 5px rgba(36, 34, 10, 0.3); */
+        cursor: pointer;
+    
+    }
+    .box:hover{
+        background-color: rgb(19, 58, 121);
+    }
+    .box:active{
+        background-color: rgb(224, 93, 120);
+    }
+    span{
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .b1{
+        background-color: rgb(148, 234, 105);
+        color: black;
+        border: 1px solid rgb(144, 223, 144);
+        width: 120px;
+    }
+    .b2{
+        background-color: midnightblue;
+    }
+    .bottom{
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <div class="calci">
+        <input class="top" type="text" placeholder="0" id="inputId">
+        <div class="line bottom">
+            <div class="box" onclick="clearInput()"><span>AC</span></div>
+            <div class="box" onclick="modulus()"><span>%</span></div>
+            <div class="box" onclick="del()"><span>⌫</span></div>
+            <div class="box" onclick="dividedby()"><span><b>÷</b></span></div>
+        </div>
+        <div class="line">
+            <div class="box b2" onclick="seven()"><span>7</span></div>
+            <div class="box b2" onclick="eight()"><span>8</span></div>
+            <div class="box b2" onclick="numNine()"><span>9</span></div>
+            <div class="box" onclick="multiply()"><span><b>×</b></span></div>
+        </div>
+        <div class="line">
+            <div class="box b2" onclick="four()"><span>4</span></div>
+            <div class="box b2" onclick="five()"><span>5</span></div>
+            <div class="box b2" onclick="six()"><span>6</span></div>
+            <div class="box" onclick="minus()"><span><b>-</b></span></div>
+        </div>
+        <div class="line">
+            <div class="box b2" onclick="one()"><span>1</span></div>
+            <div class="box b2" onclick="two()"><span>2</span></div>
+            <div class="box b2" onclick="three()"><span>3</span></div>
+            <div class="box" onclick="sumfun()"><span><b>+</b></span></div>
+        </div>
+        <div class="line">
+            <!-- <div class="box b2" onclick="doublezero()"><span>00</span></div> -->
+            <div class="box b2" onclick="zero()"><span>0</span></div>
+            <div class="box b2" onclick="dot()"><span>.</span></div>
+            <div class="box b1" onclick="equalto()"><span><b>=</b></span></div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
